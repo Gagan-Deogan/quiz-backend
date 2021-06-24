@@ -1,0 +1,227 @@
+{
+  "name": "Plant growth and development",
+  "difficult": "HARD",
+  "thumbnail": "https://sc04.alicdn.com/kf/Ha9c21e1469914dd0842f9eccf95854bex.jpg",
+  "questions": [
+    {
+      "text": "Which hormone causes internodes to lengthen?",
+      "points": 10,
+      "options": [
+        {
+          "answer": "Gibberelins",
+          "isRight": true
+        },
+        {
+          "answer": "Etiolation",
+          "isRight": false
+        },
+        {
+          "answer": "Tropism",
+          "isRight": false
+        },
+        {
+          "answer": "Cytokins",
+          "isRight": false
+        }
+      ]
+    },
+    {
+      "text": "Chemical messengers that are produced in the plant and control growth.",
+      "points": 10,
+      "options": [
+        {
+          "answer": "Hormones",
+          "isRight": true
+        },
+        {
+          "answer": "Tropisms",
+          "isRight": false
+        },
+        {
+          "answer": "Compounds",
+          "isRight": false
+        },
+        {
+          "answer": "Sugars",
+          "isRight": false
+        }
+      ]
+    },
+    {
+      "text": "A type of germination where the cotyledon goes above the soil is called",
+      "points": 10,
+      "options": [
+        {
+          "answer": "Epicotyl",
+          "isRight": false
+        },
+        {
+          "answer": "Hypocotyl",
+          "isRight": false
+        },
+        {
+          "answer": "Dicots",
+          "isRight": false
+        },
+        {
+          "answer": "Epygeal",
+          "isRight": true
+        }
+      ]
+    },
+    {
+      "text": "Which example below is the site of primary growth that results in the plant increasing in height?",
+      "points": 10,
+      "options": [
+        {
+          "answer": "bud scales",
+          "isRight": false
+        },
+        {
+          "answer": "apical meristems",
+          "isRight": true
+        },
+        {
+          "answer": "nodes",
+          "isRight": false
+        },
+        {
+          "answer": "axillary buds",
+          "isRight": false
+        }
+      ]
+    },
+    {
+      "text": "Which of the following are lateral meristems?",
+      "points": 10,
+      "options": [
+        {
+          "answer": "bundle sheaths",
+          "isRight": false
+        },
+        {
+          "answer": "axillary buds",
+          "isRight": false
+        },
+        {
+          "answer": "vascular cambium",
+          "isRight": true
+        },
+        {
+          "answer": "leaf primordia",
+          "isRight": false
+        }
+      ]
+    },
+    {
+      "text": "The layer that covers the apical meristem of a root is called the",
+      "points": 10,
+      "options": [
+        {
+          "answer": "pericycle",
+          "isRight": false
+        },
+        {
+          "answer": "taproot",
+          "isRight": false
+        },
+        {
+          "answer": "root cap",
+          "isRight": true
+        },
+        {
+          "answer": "root hair",
+          "isRight": false
+        }
+      ]
+    },
+    {
+      "text": "The external factors that affect plant growth and development are……",
+      "points": 10,
+      "options": [
+        {
+          "answer": "Temperature, Light, Gene",
+          "isRight": false
+        },
+        {
+          "answer": "Light, Auxin, Water",
+          "isRight": false
+        },
+        {
+          "answer": "Water, Light, pH",
+          "isRight": true
+        },
+        {
+          "answer": "pH, Oxygen, Kalsium",
+          "isRight": false
+        }
+      ]
+    },
+    {
+      "text": " Which of the following is correct relationship between hormone and its function?",
+      "points": 10,
+      "options": [
+        {
+          "answer": "Absisic acid = Promote root growth",
+          "isRight": false
+        },
+        {
+          "answer": "Ethylene = Fruit maturation",
+          "isRight": true
+        },
+        {
+          "answer": "Auxin = Inhibit seed germination",
+          "isRight": false
+        },
+        {
+          "answer": "Cytokinin = Drought tolerance",
+          "isRight": false
+        }
+      ]
+    },
+    {
+      "text": "Meristem tissue consist of dividing active cells. below are the characteristic of these cells ... except",
+      "points": 10,
+      "options": [
+        {
+          "answer": "small nucleus",
+          "isRight": true
+        },
+        {
+          "answer": "small vacuole",
+          "isRight": false
+        },
+        {
+          "answer": "thin cell wall",
+          "isRight": false
+        },
+        {
+          "answer": "large cytoplasm",
+          "isRight": false
+        }
+      ]
+    },
+    {
+      "text": "A student did the experiment about the effect of light to plant growth. She put one plant in dark place and the other in the light place. After 4 days, she found that the plant in the dark place grow taller than in the light one. What the name of this phenomenon and which plant hormone involved?",
+      "points": 10,
+      "options": [
+        {
+          "answer": "etiolation and auxin",
+          "isRight": true
+        },
+        {
+          "answer": "etiolation and abscisic acid",
+          "isRight": false
+        },
+        {
+          "answer": "epiolation and auxin",
+          "isRight": false
+        },
+        {
+          "answer": "epiolation and abscisic acid",
+          "isRight": false
+        }
+      ]
+    }
+  ]
+}
