@@ -9,7 +9,7 @@ const UserSchema = new Schema({
   email: {
     type: String,
     required: "Name must Required",
-    unique: [true, "email is alreay used"],
+    unique: "Email is alreay used",
     match: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,
   },
   password: {

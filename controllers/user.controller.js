@@ -16,16 +16,14 @@ const userLogin = async (req, res) => {
       if (match) {
         const jwt = issueJWT(user._id);
         user = extractProtectedKey(user);
-        res.status(200).json({
-          success: true,
+        return res.status(200).json({
           data: { user, token: jwt.token },
         });
       }
-    } else {
-      res.status(422).json({ success: false, error: "Invalid Email/Password" });
     }
+    res.status(422).json({ error: "Invalid Email/Password" });
   } catch (err) {
-    res.status(503).json({ success: false, error: "something went wrong" });
+    res.status(503).json({ error: "something went wrong" });
   }
 };
 
@@ -38,21 +36,19 @@ const newUser = async (req, res) => {
     });
     if (isAlreadyExists) {
       if (isAlreadyExists.email === user.email) {
-        res.status(422).json({ success: false, error: "Email Already Exists" });
+        res.status(422).json({ error: "Email Already Exists" });
       } else {
-        res
-          .status(422)
-          .json({ success: false, error: "Username Already Exists" });
+        res.status(422).json({ error: "Username Already Exists" });
       }
     } else {
       user.password = await generateHash(user.password);
       let NewUser = new User(user);
       NewUser = await NewUser.save();
-      res.status(201).json({ success: true, data: "Sign up Successfully" });
+      res.status(201).json({ data: "Sign up Successfully" });
     }
   } catch (err) {
     console.log(err);
-    res.status(503).json({ success: false, error: "something went wrong" });
+    res.status(503).json({ error: "something went wrong" });
   }
 };
 
@@ -60,9 +56,9 @@ const userDetails = (req, res) => {
   try {
     let { user } = req;
     user = extractProtectedKey(user);
-    res.status(200).json({ success: true, data: user });
+    res.status(200).json({ data: user });
   } catch (err) {
-    res.status(503).json({ success: false, error: "something went wrong" });
+    res.status(503).json({ error: "something went wrong" });
   }
 };
 
@@ -72,9 +68,9 @@ const changeUsername = async (req, res) => {
     const { newName } = req.body;
     user.name = newName;
     const updatedUser = await user.save();
-    res.status(200).json({ success: true, data: "Successfull Update" });
+    res.status(200).json({ data: "Successfull Update" });
   } catch (err) {
-    res.status(503).json({ success: false, error: "something went wrong" });
+    res.status(503).json({ error: "something went wrong" });
   }
 };
 const chnagePassword = async (req, res) => {
@@ -85,14 +81,12 @@ const chnagePassword = async (req, res) => {
     if (match) {
       user.password = await generateHash(newPassword);
       const updatedUser = await user.save();
-      res.status(200).json({ success: true, data: "Successfull Update" });
+      res.status(200).json({ data: "Successfull Update" });
     } else {
-      res
-        .status(422)
-        .json({ success: false, error: "Old password isn't valid" });
+      res.status(422).json({ error: "Old password isn't valid" });
     }
   } catch (err) {
-    res.status(503).json({ success: false, error: "something went wrong" });
+    res.status(503).json({ error: "something went wrong" });
   }
 };
 

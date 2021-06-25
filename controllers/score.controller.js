@@ -1,17 +1,9 @@
 const { Score } = require("../models/score.model");
+const { updateLeaderBoard } = require("../utils/leaderBoad.utils");
 
-const getAllScore = async (req, res) => {
-  try {
-    const score = await Score.find().sort(["totalScore", 1]);
-  } catch (err) {
-    res.status(503).json({ error: "something went wrong" });
-  }
-};
-
-const updateUserTotalScore = async (req, res) => {
+const updateUserScore = async (req, res) => {
   try {
     const { quiz, user } = req;
-    console.log(quiz);
 
     const { score } = req.body;
     let scorePresent = await Score.findOne({
@@ -20,7 +12,7 @@ const updateUserTotalScore = async (req, res) => {
     });
     if (scorePresent) {
       scorePresent.score = score;
-      scorePresent.save();
+      await scorePresent.save();
     } else {
       const newScore = new Score({
         userId: user._id,
@@ -29,10 +21,11 @@ const updateUserTotalScore = async (req, res) => {
       });
       await newScore.save();
     }
+    updateLeaderBoard(user._id);
     res.status(200).json({ data: "successfull Submitted" });
   } catch (err) {
     console.log(err);
     res.status(503).json({ error: "something went wrong" });
   }
 };
-module.exports = { updateUserTotalScore };
+module.exports = { updateUserScore };
