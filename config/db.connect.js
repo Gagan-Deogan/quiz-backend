@@ -1,9 +1,6 @@
 const mongoose = require("mongoose");
-const yenv = require("yenv");
-const env = yenv("app.yaml", { env: "env_variables" });
-
-const mySecret = env["DBPASSWORD"];
-
+require("dotenv").config();
+const mySecret = process.env.DB_PASSWORD;
 const initializeDBConnection = async () => {
   try {
     await mongoose.connect(
